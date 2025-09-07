@@ -1,5 +1,7 @@
 # Project Overview
 
+#  change the namespace according to your project
+
 This repository is organized into several directories, each serving a specific purpose for deployment, CI/CD, and monitoring.
 
 ## Directory Structure
@@ -30,3 +32,4 @@ change the namespace details in every yaml file
 ---
 
 For more details, see the individual README.md files in each directory.
+
