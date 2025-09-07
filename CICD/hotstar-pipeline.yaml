@@ -5,7 +5,7 @@ metadata:
   namespace: cloud5335-dev
 spec:
   params:
-    - default: 'veeranarni/hotstar:latest'
+    - default: 'veeranarni/hotstar:latest'        #### cahnge here your actual image
       description: Docker Hub image to deploy
       name: image
       type: string
@@ -75,3 +75,4 @@ spec:
                 tls:
                   termination: edge
               EOF
+
