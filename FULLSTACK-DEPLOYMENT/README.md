@@ -1,4 +1,5 @@
 # FULLSTACK-DEPLOYMENT
+#  change the namespace and git urls  according to your project
 
 This directory contains deployment configurations for the full stack application.
 
@@ -19,4 +20,5 @@ oc start-build flask-build --follow
 
 ```
 oc apply -f dc.yaml
+
 ```
