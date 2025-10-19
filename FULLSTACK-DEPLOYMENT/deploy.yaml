@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: nodejs-app
-          image: image-registry.openshift-image-registry.svc:5000/sak2944-dev/nodejs-image:latest
+          image: image-registry.openshift-image-registry.svc:5000/sak2944-dev/nodejs-build:latest
           ports:
             - containerPort: 3000
   strategy:
@@ -30,7 +30,7 @@ spec:
           - nodejs-app
         from:
           kind: ImageStreamTag
-          name: nodejs-image:latest
+          name: nodejs-build:latest
           namespace: sak2944-dev
 ---
 apiVersion: v1
