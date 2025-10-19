@@ -2,8 +2,8 @@
 apiVersion: build.openshift.io/v1
 kind: BuildConfig
 metadata:
-  name: nodejs-build
-  namespace: cloud53375-dev
+  name: nodejs-image
+  namespace: sak2944-dev
   labels:
     app: nodejs-app
 spec:
@@ -11,7 +11,7 @@ spec:
   source:
     type: Git
     git:
-      uri: "https://github.com/CloudTechDevOps/Hotstar-DevOps-Project-NodeJS.git"
+      uri: "https://github.com/sak2944-wqsga/Hotstar-DevOps-Project-NodeJS.git"
       ref: main     # change if your default branch is not 'main'
     contextDir: "." # if Dockerfile is at repo root
   strategy:
@@ -32,6 +32,6 @@ apiVersion: image.openshift.io/v1
 kind: ImageStream
 metadata:
   name: nodejs-image
-  namespace: cloud53375-dev
+  namespace: sak2944-dev
   labels:
     app: nodejs-app
