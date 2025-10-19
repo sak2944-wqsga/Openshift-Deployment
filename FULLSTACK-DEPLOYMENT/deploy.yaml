@@ -2,7 +2,7 @@ apiVersion: apps.openshift.io/v1
 kind: DeploymentConfig
 metadata:
   name: nodejs-app
-  namespace: cloud53375-dev
+  namespace: sak2944-dev
   labels:
     app: nodejs-app
 spec:
@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: nodejs-app
-          image: image-registry.openshift-image-registry.svc:5000/cloud53375-dev/nodejs-image:latest
+          image: image-registry.openshift-image-registry.svc:5000/sak2944-dev/nodejs-image:latest
           ports:
             - containerPort: 3000
   strategy:
@@ -31,13 +31,13 @@ spec:
         from:
           kind: ImageStreamTag
           name: nodejs-image:latest
-          namespace: cloud53375-dev
+          namespace: sak2944-dev
 ---
 apiVersion: v1
 kind: Service
 metadata:
   name: nodejs-app
-  namespace: cloud53375-dev
+  namespace: sak2944-dev
   labels:
     app: nodejs-app
 spec:
@@ -52,7 +52,7 @@ apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
   name: nodejs-app
-  namespace: cloud53375-dev
+  namespace: sak2944-dev
 spec:
   to:
     kind: Service
